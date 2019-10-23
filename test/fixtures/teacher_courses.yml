@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code: MyString
+  year: 1
+  semester: 1
+  teacher: one
+  course: one
+
+two:
+  code: MyString
+  year: 1
+  semester: 1
+  teacher: two
+  course: two
