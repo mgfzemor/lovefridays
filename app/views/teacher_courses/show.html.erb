@@ -17,12 +17,12 @@
 
 <p>
   <strong>Teacher:</strong>
-  <%= @teacher_course.teacher_id %>
+  <%= @teacher_course.teacher.full_name %>
 </p>
 
 <p>
   <strong>Course:</strong>
-  <%= @teacher_course.course_id %>
+  <%= @teacher_course.course.name %>
 </p>
 
 <%= link_to 'Edit', edit_teacher_course_path(@teacher_course) %> |

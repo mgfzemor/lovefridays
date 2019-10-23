@@ -28,12 +28,12 @@
 
   <div class="field">
     <%= form.label :teacher_id %>
-    <%= form.text_field :teacher_id %>
+    <%= collection_select(:teacher_course, :teacher_id, Teacher.all, :id, :full_name, prompt: true) %>
   </div>
 
   <div class="field">
     <%= form.label :course_id %>
-    <%= form.text_field :course_id %>
+    <%= collection_select(:teacher_course, :course_id, Course.all, :id, :name, prompt: true) %>
   </div>
 
   <div class="actions">

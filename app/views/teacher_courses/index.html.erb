@@ -20,8 +20,8 @@
         <td><%= teacher_course.code %></td>
         <td><%= teacher_course.year %></td>
         <td><%= teacher_course.semester %></td>
-        <td><%= teacher_course.teacher_id %></td>
-        <td><%= teacher_course.course_id %></td>
+        <td><%= teacher_course.teacher.full_name %></td>
+        <td><%= teacher_course.course.name %></td>
         <td><%= link_to 'Show', teacher_course %></td>
         <td><%= link_to 'Edit', edit_teacher_course_path(teacher_course) %></td>
         <td><%= link_to 'Destroy', teacher_course, method: :delete, data: { confirm: 'Are you sure?' } %></td>

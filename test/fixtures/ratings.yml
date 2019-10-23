@@ -3,9 +3,9 @@
 one:
   grade: 1
   comment: MyText
-  class: one
+  course: one
 
 two:
   grade: 1
   comment: MyText
-  class: two
+  course: two
