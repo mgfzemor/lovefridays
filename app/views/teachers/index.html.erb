@@ -1,29 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Teachers</h1>
+<% content_for :title do %>
+  <h1>Teachers</h1>
+<% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Full name</th>
-      <th>Email</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<%= render 'layouts/table',
+           headers: ['Full name', 'Email', 'Show', 'Edit', 'Destroy'],
+           rows: @teachers.map { |teacher|
+            [teacher.full_name,
+             teacher.email,
+             link_to('Show', teacher),
+             link_to('Edit', edit_teacher_path(teacher)),
+             link_to('Destroy', teacher, method: :delete, data: { confirm: 'Are you sure?' })]
+           } %>
 
-  <tbody>
-    <% @teachers.each do |teacher| %>
-      <tr>
-        <td><%= teacher.full_name %></td>
-        <td><%= teacher.email %></td>
-        <td><%= link_to 'Show', teacher %></td>
-        <td><%= link_to 'Edit', edit_teacher_path(teacher) %></td>
-        <td><%= link_to 'Destroy', teacher, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Teacher', new_teacher_path %>
+<%= link_to 'New Teacher', new_teacher_path, class:'btn btn-success' %>
