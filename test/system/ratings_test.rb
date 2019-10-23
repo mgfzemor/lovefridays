@@ -14,8 +14,8 @@ class RatingsTest < ApplicationSystemTestCase
     visit ratings_url
     click_on "New Rating"
 
-    fill_in "Class", with: @rating.class_id
     fill_in "Comment", with: @rating.comment
+    fill_in "Course", with: @rating.course_id
     fill_in "Grade", with: @rating.grade
     click_on "Create Rating"
 
@@ -27,8 +27,8 @@ class RatingsTest < ApplicationSystemTestCase
     visit ratings_url
     click_on "Edit", match: :first
 
-    fill_in "Class", with: @rating.class_id
     fill_in "Comment", with: @rating.comment
+    fill_in "Course", with: @rating.course_id
     fill_in "Grade", with: @rating.grade
     click_on "Update Rating"
 
