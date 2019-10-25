@@ -7,7 +7,7 @@
     <tr>
       <th>Grade</th>
       <th>Comment</th>
-      <th>Course</th>
+      <th>Teacher course</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,7 +17,7 @@
       <tr>
         <td><%= rating.grade %></td>
         <td><%= rating.comment %></td>
-        <td><%= rating.course_id %></td>
+        <td><%= rating.teacher_course_id %></td>
         <td><%= link_to 'Show', rating %></td>
         <td><%= link_to 'Edit', edit_rating_path(rating) %></td>
         <td><%= link_to 'Destroy', rating, method: :delete, data: { confirm: 'Are you sure?' } %></td>

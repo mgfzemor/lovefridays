@@ -15,8 +15,8 @@ class RatingsTest < ApplicationSystemTestCase
     click_on "New Rating"
 
     fill_in "Comment", with: @rating.comment
-    fill_in "Course", with: @rating.course_id
     fill_in "Grade", with: @rating.grade
+    fill_in "Teacher course", with: @rating.teacher_course_id
     click_on "Create Rating"
 
     assert_text "Rating was successfully created"
@@ -28,8 +28,8 @@ class RatingsTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Comment", with: @rating.comment
-    fill_in "Course", with: @rating.course_id
     fill_in "Grade", with: @rating.grade
+    fill_in "Teacher course", with: @rating.teacher_course_id
     click_on "Update Rating"
 
     assert_text "Rating was successfully updated"
