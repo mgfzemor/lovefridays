@@ -5,6 +5,7 @@ class TeacherCourse < ApplicationRecord
 
   enum semester: %i[first_semester second_semester]
 
+  validates_length_of :code, minimum: 5, maximum: 5
   validates :code, presence: true
   validates :year, presence: true
   validates :semester, presence: true
