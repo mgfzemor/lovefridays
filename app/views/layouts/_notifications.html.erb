@@ -1,0 +1,34 @@
+<script>
+    <% flash.each do |name, msg| %>
+        <% puts 'flash', name, msg %>
+        <% if msg.is_a? String %>
+            <% if name.to_s == 'notice' %>
+                $.notify({
+                        icon: "nc-icon nc-bell-55",
+                        message: "<%= msg %>"
+                    }, {
+                        type: 'success',
+                        timer: 3000,
+                        placement: {
+                            from: 'bottom',
+                            align: 'right'
+                        }
+                    }
+                );
+            <% else %>
+                $.notify({
+                        icon: "nc-icon nc-simple-remove",
+                        message: "<%= msg %>"
+                    }, {
+                        type: 'danger',
+                        timer: 3000,
+                        placement: {
+                            from: 'bottom',
+                            align: 'right'
+                        }
+                    }
+                );
+            <% end %>
+        <% end %>
+    <% end %>
+</script>
