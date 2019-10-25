@@ -10,5 +10,12 @@
   <%= @teacher.email %>
 </p>
 
+<% if @teacher.avatar.attached? %>
+  <p>
+    <strong>Avatar:</strong>
+    <%= image_tag url_for(@teacher.avatar) %>
+  </p>
+<% end %>
+
 <%= link_to 'Edit', edit_teacher_path(@teacher) %> |
 <%= link_to 'Back', teachers_path %>
