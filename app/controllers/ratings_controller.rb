@@ -12,6 +12,30 @@ class RatingsController < ApplicationController
   def show
   end
 
+  # GET /courses/1/ratings
+  # GET /courses/1/ratings.json
+  def courses
+    @ratings = Course.find(params[:course_id]).ratings
+
+    render :index
+  end
+
+  # GET /teachers/1/ratings
+  # GET /teachers/1/ratings.json
+  def teachers
+    @ratings = Teacher.find(params[:teacher_id]).ratings
+
+    render :index
+  end
+
+  # GET /teacher_courses/1/ratings
+  # GET /teacher_courses/1/ratings.json
+  def teacher_courses
+    @ratings = TeacherCourse.find(params[:teacher_course_id]).ratings
+
+    render :index
+  end
+
   # GET /ratings/new
   def new
     @rating = Rating.new
