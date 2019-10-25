@@ -1,4 +1,5 @@
 class TeacherCourse < ApplicationRecord
+  has_many :ratings
   belongs_to :teacher
   belongs_to :course
 
