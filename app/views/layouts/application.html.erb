@@ -42,31 +42,31 @@
         </div>
         <div class="sidebar-wrapper">
           <ul class="nav">
-            <li class="active ">
+            <li>
               <a href="/index.html">
                 <i class="nc-icon nc-bank"></i>
                 <p>Home</p>
               </a>
             </li>
-            <li>
+            <li class="<%= "active" if controller_name == 'teachers' %>">
               <a href="/teachers.html">
                 <i class="nc-icon nc-circle-10"></i>
                 <p>Teachers</p>
               </a>
             </li>
-            <li>
+            <li class="<%= "active" if controller_name == 'courses' %>">
               <a href="/courses.html">
                 <i class="nc-icon nc-align-left-2"></i>
                 <p>Courses</p>
               </a>
             </li>
-            <li>
+            <li class="<%= "active" if controller_name == 'teacher_courses' %>">
               <a href="/teacher_courses.html">
                 <i class="nc-icon nc-bell-55"></i>
                 <p>Classes</p>
               </a>
             </li>
-            <li>
+            <li class="<%= "active" if controller_name == 'ratings' %>">
               <a href="/ratings.html">
                 <i class="nc-icon nc-chat-33"></i>
                 <p>Ratings</p>
