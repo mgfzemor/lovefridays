@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :semester %>
-    <%= form.number_field :semester %>
+    <%= form.select :bank_option, TeacherCourse.semesters, {include_blank: "Selecione um semestre"} %>
   </div>
 
   <div class="field">
