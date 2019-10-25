@@ -16,6 +16,7 @@
  *= require scaffolds
  *= require teacher_courses
  *= require teachers
+ *= require actiontext
  *= require bootstrap.min.css
  *= require paper-dashboard.min.css
  *= require custom
